@@ -1,0 +1,76 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <artifactId>base-samples</artifactId>
+        <groupId>com.example</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.example</groupId>
+    <artifactId>zookeeper</artifactId>
+    <packaging>war</packaging>
+    <name>zookeeper Maven Webapp</name>
+    <url>http://maven.apache.org</url>
+
+    <!-- 2.x兼容3.4.x和3.5.x, 但是3.x只兼容3.5.x  -->
+    <properties>
+        <curator.recipes.version>2.12.0</curator.recipes.version>
+        <curator.framework.version>2.12.0</curator.framework.version>
+        <curator.test.version>2.5.0</curator.test.version>
+        <zookeeper.version>3.4.5</zookeeper.version>
+        <commons.math.version>3.6.1</commons.math.version>
+        <commons.lang3.version>3.6</commons.lang3.version>
+        <commons.lang.version>2.6</commons.lang.version>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-recipes</artifactId>
+            <version>${curator.recipes.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-framework</artifactId>
+            <version>${curator.framework.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-test</artifactId>
+            <version>${curator.test.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>${zookeeper.version}</version>
+            <type>pom</type>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-math3</artifactId>
+            <version>${commons.math.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons.lang3.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>${commons.lang.version}</version>
+        </dependency>
+
+
+    </dependencies>
+    <build>
+        <finalName>zookeeper</finalName>
+    </build>
+</project>
