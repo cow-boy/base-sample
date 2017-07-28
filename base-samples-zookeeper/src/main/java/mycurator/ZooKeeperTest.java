@@ -1,4 +1,4 @@
-package com.zookeeper.curator;
+package mycurator;
 
 import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.ZooDefs;
